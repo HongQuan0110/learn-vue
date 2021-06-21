@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS</title>
+    <script src="./vue.js"></script>
+    
+</head>
+<body>
+    <div id="App">
+        <div v-on:mousemove="tinhToaDo(1, $event)">
+            <input type="text" v-on:input="changeValue">
+            <h1>{{ content }}</h1>
+            <p v-once>{{ title }} - {{ showTitle() }}</p>
+            <a v-bind:href="link">fb</a>
+            <p v-html="testMaHTML"></p>
+            <div>{{ dem }}</div>
+            <button v-on:click="increase">Click</button>
+            <p>{{x}} - {{y}}</p>
+            <span v-on:mousemove="stopMouse">Stop mouse</span>
+        </div>
+        <input type="text" v-on:keyup.enter.space="banPhim">
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
